@@ -1,0 +1,6 @@
+FROM golang:alpine
+
+RUN apk add --no-cache git && \
+    go get -u github.com/coreos/terraform-provider-matchbox
+
+ENTRYPOINT ["/bin/sh","-c"]

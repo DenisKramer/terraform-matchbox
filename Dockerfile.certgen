@@ -1,0 +1,9 @@
+FROM alpine:latest
+
+RUN apk --no-cache add openssl
+COPY cert-gen.sh /cert-gen.sh
+COPY openssl.conf /openssl.conf
+
+WORKDIR /target
+
+ENTRYPOINT ["/cert-gen.sh"]
