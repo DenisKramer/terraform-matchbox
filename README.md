@@ -1,7 +1,8 @@
 # terraform-matchbox
 
-The container provides a terraform runtime based on the terraform:light container
-with the CoreOS matchbox provider integrated.
+The container provides a [terraform](https://www.terraform.io) runtime based on
+the [terraform:light](https://hub.docker.com/r/hashicorp/terraform/) container
+with the [CoreOS matchbox provider](https://github.com/coreos/terraform-provider-matchbox) integrated.
 
 ## How to compile
 
