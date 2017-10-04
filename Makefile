@@ -42,6 +42,7 @@ test: container $(CERTS) $(TEST_DIR) $(TEST_MATCHBOX_DIR) $(TEST_MATCHBOX_ASSET_
 									-v $(TEST_CERTS_DIR)/server.key:/etc/matchbox/server.key:z,ro \
 									-v $(TEST_CERTS_DIR)/server.crt:/etc/matchbox/server.crt:z,ro \
 									quay.io/coreos/matchbox:latest -address=0.0.0.0:8080 -rpc-address=0.0.0.0:8081
+	-docker run --rm --net testnet --name terraform-init -v $(TEST_DIR):/build $(DOCKER_TAG) init
 	docker run --rm --net testnet --name terraform \
 									-v $(TEST_DIR):/build \
 	 								-v $(TEST_CERTS_DIR)/client.crt:/root/.matchbox/client.crt:ro \

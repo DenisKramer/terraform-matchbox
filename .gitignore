@@ -1,2 +1,6 @@
 assets
 certs
+matchbox/
+testing/.terraform/
+testing/terraform.tfstate
+testing/terraform.tfstate.backup
